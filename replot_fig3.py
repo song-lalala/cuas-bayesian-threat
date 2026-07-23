@@ -44,7 +44,7 @@ plt.rcParams.update({
     "lines.linewidth": 2.4, "lines.markersize": 9, "axes.linewidth": 1.0,
 })
 
-fig, axes = plt.subplots(2, 2, figsize=(15.5, 7.0))
+fig, axes = plt.subplots(2, 2, figsize=(15.5, 5.6))
 handles = None
 for ax, (key, title) in zip(axes.ravel(), PANELS):
     for mkey, label, color, ls, mk in STYLE:
