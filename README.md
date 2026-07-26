@@ -26,6 +26,7 @@ the rest of the pipeline.
 - `experiments.py` — Exp1 (scarcity sweep), Exp2 (sensors), Exp3 (ablation); writes `results/`.
 - `exp_constraints.py` — weak-prior study: monotonicity-violation rate MAP vs cMAP.
 - `replot_fig3.py` — regenerate `results/exp1_scarcity.png` with publication styling.
+- `rf_confusion.py` — real-data RF-node calibration: trains a compact CNN on the DroneRF benchmark (4-class RF spectrograms: background + Bebop/AR/Phantom) and writes the measured confusion matrix + heatmap to `results/`. Needs the processed `droneRF_four.npz` derived from the public DroneRF dataset (Allahham et al., 2019); set `DRONERF_NPZ` to its path.
 - `VALIDATION_OPTIONS.md` — single-world validation design and deferred AirSim / real-dataset options.
 
 ## Run
@@ -33,6 +34,7 @@ the rest of the pipeline.
 pip install -r requirements.txt
 python experiments.py        # ~5-6 min; writes results/RESULTS.md, CSVs, PNGs
 python exp_constraints.py    # ~1-2 min; writes results/exp_constraints.csv
+DRONERF_NPZ=/path/droneRF_four.npz python rf_confusion.py   # ~2 min; measured RF confusion matrix (needs the DroneRF dataset)
 ```
 
 ## Coherence (single world)

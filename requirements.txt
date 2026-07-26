@@ -3,3 +3,4 @@ scipy
 scikit-learn
 matplotlib
 pandas
+torch   # only for rf_confusion.py (real-data RF calibration on DroneRF)
