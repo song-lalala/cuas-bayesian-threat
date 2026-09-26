@@ -1,0 +1,26 @@
+[calibsize-CI] rep 1/20 (7s)
+[calibsize-CI] rep 2/20 (14s)
+[calibsize-CI] rep 3/20 (21s)
+[calibsize-CI] rep 4/20 (28s)
+[calibsize-CI] rep 5/20 (35s)
+[calibsize-CI] rep 6/20 (42s)
+[calibsize-CI] rep 7/20 (49s)
+[calibsize-CI] rep 8/20 (55s)
+[calibsize-CI] rep 9/20 (63s)
+[calibsize-CI] rep 10/20 (69s)
+[calibsize-CI] rep 11/20 (76s)
+[calibsize-CI] rep 12/20 (83s)
+[calibsize-CI] rep 13/20 (90s)
+[calibsize-CI] rep 14/20 (97s)
+[calibsize-CI] rep 15/20 (103s)
+[calibsize-CI] rep 16/20 (111s)
+[calibsize-CI] rep 17/20 (117s)
+[calibsize-CI] rep 18/20 (124s)
+[calibsize-CI] rep 19/20 (130s)
+[calibsize-CI] rep 20/20 (138s)
+calib_n=0 (abstract): acc 0.566+-0.008, macroF1 0.481+-0.011, macroAUC 0.807+-0.003, brier 0.544+-0.007, ece 0.044+-0.010
+calib_n=30 (estimated): acc 0.580+-0.008, macroF1 0.493+-0.012, macroAUC 0.819+-0.004, brier 0.529+-0.007, ece 0.034+-0.007
+calib_n=100 (estimated): acc 0.581+-0.008, macroF1 0.494+-0.014, macroAUC 0.821+-0.004, brier 0.526+-0.008, ece 0.035+-0.008
+calib_n=300 (estimated): acc 0.583+-0.008, macroF1 0.496+-0.014, macroAUC 0.822+-0.004, brier 0.525+-0.008, ece 0.034+-0.009
+calib_n=1000 (estimated): acc 0.582+-0.008, macroF1 0.496+-0.013, macroAUC 0.822+-0.004, brier 0.525+-0.008, ece 0.035+-0.008
+calib_n=-1 (oracle-true-CM): acc 0.583+-0.008, macroF1 0.496+-0.013, macroAUC 0.822+-0.004, brier 0.524+-0.008, ece 0.034+-0.009

@@ -1,0 +1,109 @@
+# Exp-B: standard baselines and the realistic-expert prior
+
+## means +- 95% CI half-width
+### N=10
+- Proposed             acc 0.534+-0.021, macroAUC 0.793+-0.009, ece 0.077+-0.026, brier 0.586+-0.026
+- uninformative MAP    acc 0.442+-0.026, macroAUC 0.671+-0.024, ece 0.143+-0.023, brier 0.712+-0.007
+- Laplace              acc 0.431+-0.025, macroAUC 0.672+-0.024, ece 0.154+-0.020, brier 0.726+-0.004
+- B1-MLE               acc 0.457+-0.025, macroAUC 0.661+-0.023, ece 0.111+-0.014, brier 0.696+-0.017
+- B0-as-prior MAP      acc 0.515+-0.024, macroAUC 0.787+-0.004, ece 0.123+-0.023, brier 0.621+-0.008
+- logistic regression  acc 0.401+-0.025, macroAUC 0.587+-0.014, ece 0.224+-0.029, brier 0.784+-0.032
+- expert MAP (full table) acc 0.527+-0.024, macroAUC 0.788+-0.010, ece 0.088+-0.028, brier 0.593+-0.027
+- expert cMAP (full table) acc 0.528+-0.023, macroAUC 0.790+-0.009, ece 0.087+-0.028, brier 0.592+-0.027
+### N=50
+- Proposed             acc 0.559+-0.009, macroAUC 0.806+-0.004, ece 0.051+-0.013, brier 0.551+-0.010
+- uninformative MAP    acc 0.533+-0.012, macroAUC 0.769+-0.006, ece 0.125+-0.013, brier 0.613+-0.006
+- Laplace              acc 0.530+-0.013, macroAUC 0.766+-0.007, ece 0.166+-0.014, brier 0.642+-0.005
+- B1-MLE               acc 0.533+-0.011, macroAUC 0.761+-0.008, ece 0.107+-0.018, brier 0.602+-0.014
+- B0-as-prior MAP      acc 0.555+-0.009, macroAUC 0.799+-0.003, ece 0.079+-0.011, brier 0.566+-0.006
+- logistic regression  acc 0.462+-0.013, macroAUC 0.678+-0.010, ece 0.161+-0.017, brier 0.691+-0.016
+- expert MAP (full table) acc 0.556+-0.008, macroAUC 0.801+-0.004, ece 0.059+-0.014, brier 0.557+-0.010
+- expert cMAP (full table) acc 0.556+-0.008, macroAUC 0.802+-0.004, ece 0.059+-0.014, brier 0.557+-0.009
+### N=80
+- Proposed             acc 0.565+-0.008, macroAUC 0.810+-0.003, ece 0.042+-0.008, brier 0.541+-0.006
+- uninformative MAP    acc 0.553+-0.009, macroAUC 0.785+-0.003, ece 0.102+-0.011, brier 0.582+-0.005
+- Laplace              acc 0.551+-0.009, macroAUC 0.782+-0.003, ece 0.145+-0.010, brier 0.607+-0.004
+- B1-MLE               acc 0.549+-0.008, macroAUC 0.783+-0.004, ece 0.086+-0.012, brier 0.577+-0.008
+- B0-as-prior MAP      acc 0.564+-0.008, macroAUC 0.804+-0.003, ece 0.058+-0.009, brier 0.552+-0.005
+- logistic regression  acc 0.485+-0.012, macroAUC 0.708+-0.008, ece 0.136+-0.013, brier 0.657+-0.011
+- expert MAP (full table) acc 0.563+-0.008, macroAUC 0.805+-0.004, ece 0.051+-0.009, brier 0.547+-0.006
+- expert cMAP (full table) acc 0.563+-0.008, macroAUC 0.806+-0.003, ece 0.050+-0.009, brier 0.547+-0.006
+### N=100
+- Proposed             acc 0.567+-0.008, macroAUC 0.811+-0.003, ece 0.040+-0.007, brier 0.538+-0.005
+- uninformative MAP    acc 0.556+-0.009, macroAUC 0.793+-0.003, ece 0.088+-0.011, brier 0.569+-0.005
+- Laplace              acc 0.555+-0.009, macroAUC 0.790+-0.003, ece 0.132+-0.011, brier 0.592+-0.004
+- B1-MLE               acc 0.554+-0.008, macroAUC 0.792+-0.004, ece 0.074+-0.010, brier 0.562+-0.008
+- B0-as-prior MAP      acc 0.565+-0.008, macroAUC 0.807+-0.003, ece 0.050+-0.008, brier 0.546+-0.005
+- logistic regression  acc 0.492+-0.012, macroAUC 0.722+-0.007, ece 0.120+-0.011, brier 0.640+-0.010
+- expert MAP (full table) acc 0.566+-0.007, macroAUC 0.807+-0.004, ece 0.047+-0.009, brier 0.543+-0.005
+- expert cMAP (full table) acc 0.566+-0.008, macroAUC 0.808+-0.003, ece 0.047+-0.009, brier 0.542+-0.005
+### N=200
+- Proposed             acc 0.577+-0.008, macroAUC 0.817+-0.003, ece 0.030+-0.005, brier 0.528+-0.004
+- uninformative MAP    acc 0.571+-0.007, macroAUC 0.808+-0.002, ece 0.056+-0.007, brier 0.541+-0.003
+- Laplace              acc 0.570+-0.007, macroAUC 0.805+-0.002, ece 0.090+-0.008, brier 0.554+-0.003
+- B1-MLE               acc 0.571+-0.007, macroAUC 0.810+-0.002, ece 0.044+-0.005, brier 0.536+-0.004
+- B0-as-prior MAP      acc 0.575+-0.007, macroAUC 0.814+-0.002, ece 0.035+-0.006, brier 0.532+-0.004
+- logistic regression  acc 0.523+-0.011, macroAUC 0.760+-0.005, ece 0.080+-0.011, brier 0.596+-0.008
+- expert MAP (full table) acc 0.574+-0.007, macroAUC 0.815+-0.002, ece 0.036+-0.006, brier 0.531+-0.004
+- expert cMAP (full table) acc 0.574+-0.007, macroAUC 0.815+-0.002, ece 0.036+-0.006, brier 0.531+-0.004
+### N=400
+- Proposed             acc 0.582+-0.007, macroAUC 0.820+-0.003, ece 0.024+-0.003, brier 0.522+-0.004
+- uninformative MAP    acc 0.579+-0.007, macroAUC 0.814+-0.003, ece 0.038+-0.005, brier 0.528+-0.004
+- Laplace              acc 0.579+-0.008, macroAUC 0.812+-0.003, ece 0.057+-0.007, brier 0.533+-0.004
+- B1-MLE               acc 0.578+-0.007, macroAUC 0.816+-0.003, ece 0.032+-0.006, brier 0.526+-0.004
+- B0-as-prior MAP      acc 0.580+-0.007, macroAUC 0.818+-0.003, ece 0.029+-0.005, brier 0.525+-0.004
+- logistic regression  acc 0.552+-0.009, macroAUC 0.783+-0.005, ece 0.051+-0.006, brier 0.566+-0.006
+- expert MAP (full table) acc 0.581+-0.007, macroAUC 0.818+-0.003, ece 0.030+-0.005, brier 0.525+-0.004
+- expert cMAP (full table) acc 0.581+-0.007, macroAUC 0.818+-0.003, ece 0.029+-0.005, brier 0.524+-0.004
+
+## paired: Proposed - baseline
+- N=10 vs uninformative MAP: dmacroAUC +0.122 (p=7.3e-09), dece -0.066 (p=1.8e-05), dbrier -0.125 (p=1.4e-08)
+- N=10 vs Laplace: dmacroAUC +0.120 (p=1.0e-08), dece -0.077 (p=4.1e-06), dbrier -0.139 (p=1.8e-09)
+- N=10 vs B1-MLE: dmacroAUC +0.131 (p=7.2e-10), dece -0.034 (p=2.4e-02), dbrier -0.110 (p=3.0e-06)
+- N=10 vs B0-as-prior MAP: dmacroAUC +0.006 (p=2.6e-01), dece -0.047 (p=1.4e-03), dbrier -0.035 (p=2.1e-02)
+- N=10 vs logistic regression: dmacroAUC +0.205 (p=1.1e-17), dece -0.147 (p=5.2e-07), dbrier -0.198 (p=2.7e-08)
+- N=10 vs expert MAP (full table): dmacroAUC +0.004 (p=2.1e-02), dece -0.012 (p=1.1e-02), dbrier -0.007 (p=1.6e-03)
+- N=10 vs expert cMAP (full table): dmacroAUC +0.003 (p=2.6e-02), dece -0.011 (p=1.9e-02), dbrier -0.006 (p=1.2e-03)
+- N=50 vs uninformative MAP: dmacroAUC +0.037 (p=9.4e-09), dece -0.074 (p=1.8e-07), dbrier -0.063 (p=4.4e-10)
+- N=50 vs Laplace: dmacroAUC +0.040 (p=4.1e-09), dece -0.115 (p=3.6e-10), dbrier -0.091 (p=3.5e-13)
+- N=50 vs B1-MLE: dmacroAUC +0.045 (p=5.4e-10), dece -0.055 (p=2.1e-06), dbrier -0.051 (p=1.6e-06)
+- N=50 vs B0-as-prior MAP: dmacroAUC +0.007 (p=8.8e-03), dece -0.028 (p=1.0e-02), dbrier -0.015 (p=7.5e-03)
+- N=50 vs logistic regression: dmacroAUC +0.129 (p=1.8e-15), dece -0.110 (p=6.1e-09), dbrier -0.141 (p=5.1e-12)
+- N=50 vs expert MAP (full table): dmacroAUC +0.005 (p=2.1e-03), dece -0.008 (p=4.1e-02), dbrier -0.007 (p=5.6e-04)
+- N=50 vs expert cMAP (full table): dmacroAUC +0.004 (p=2.8e-03), dece -0.007 (p=5.4e-02), dbrier -0.006 (p=1.5e-03)
+- N=80 vs uninformative MAP: dmacroAUC +0.025 (p=6.4e-11), dece -0.060 (p=1.7e-07), dbrier -0.041 (p=4.1e-10)
+- N=80 vs Laplace: dmacroAUC +0.028 (p=4.6e-11), dece -0.103 (p=2.4e-11), dbrier -0.066 (p=5.2e-14)
+- N=80 vs B1-MLE: dmacroAUC +0.027 (p=3.4e-12), dece -0.044 (p=3.1e-07), dbrier -0.036 (p=2.5e-07)
+- N=80 vs B0-as-prior MAP: dmacroAUC +0.006 (p=1.1e-03), dece -0.016 (p=2.4e-02), dbrier -0.011 (p=4.6e-03)
+- N=80 vs logistic regression: dmacroAUC +0.102 (p=5.2e-15), dece -0.094 (p=3.7e-11), dbrier -0.116 (p=4.0e-13)
+- N=80 vs expert MAP (full table): dmacroAUC +0.005 (p=3.1e-03), dece -0.009 (p=2.3e-03), dbrier -0.006 (p=7.6e-04)
+- N=80 vs expert cMAP (full table): dmacroAUC +0.004 (p=6.9e-04), dece -0.008 (p=4.7e-03), dbrier -0.005 (p=9.4e-04)
+- N=100 vs uninformative MAP: dmacroAUC +0.019 (p=2.1e-09), dece -0.048 (p=2.5e-06), dbrier -0.031 (p=1.6e-09)
+- N=100 vs Laplace: dmacroAUC +0.022 (p=4.2e-10), dece -0.093 (p=9.3e-11), dbrier -0.053 (p=4.9e-14)
+- N=100 vs B1-MLE: dmacroAUC +0.019 (p=1.7e-08), dece -0.035 (p=4.4e-09), dbrier -0.024 (p=1.3e-05)
+- N=100 vs B0-as-prior MAP: dmacroAUC +0.004 (p=9.4e-03), dece -0.011 (p=9.1e-02), dbrier -0.007 (p=1.4e-02)
+- N=100 vs logistic regression: dmacroAUC +0.089 (p=9.9e-16), dece -0.081 (p=4.5e-11), dbrier -0.102 (p=1.8e-13)
+- N=100 vs expert MAP (full table): dmacroAUC +0.004 (p=1.1e-02), dece -0.008 (p=6.5e-03), dbrier -0.004 (p=7.0e-03)
+- N=100 vs expert cMAP (full table): dmacroAUC +0.003 (p=4.7e-03), dece -0.007 (p=1.0e-02), dbrier -0.004 (p=7.9e-03)
+- N=200 vs uninformative MAP: dmacroAUC +0.009 (p=4.8e-08), dece -0.026 (p=3.0e-05), dbrier -0.013 (p=1.4e-08)
+- N=200 vs Laplace: dmacroAUC +0.012 (p=3.1e-09), dece -0.060 (p=1.2e-09), dbrier -0.026 (p=4.8e-13)
+- N=200 vs B1-MLE: dmacroAUC +0.007 (p=2.5e-06), dece -0.014 (p=5.0e-07), dbrier -0.008 (p=1.4e-05)
+- N=200 vs B0-as-prior MAP: dmacroAUC +0.003 (p=4.6e-03), dece -0.005 (p=2.4e-01), dbrier -0.004 (p=5.1e-03)
+- N=200 vs logistic regression: dmacroAUC +0.057 (p=1.5e-14), dece -0.050 (p=3.1e-08), dbrier -0.068 (p=6.5e-14)
+- N=200 vs expert MAP (full table): dmacroAUC +0.002 (p=1.1e-03), dece -0.006 (p=1.2e-03), dbrier -0.003 (p=5.5e-04)
+- N=200 vs expert cMAP (full table): dmacroAUC +0.002 (p=1.3e-03), dece -0.006 (p=6.5e-04), dbrier -0.003 (p=5.3e-04)
+- N=400 vs uninformative MAP: dmacroAUC +0.006 (p=2.2e-07), dece -0.013 (p=1.6e-04), dbrier -0.006 (p=5.9e-07)
+- N=400 vs Laplace: dmacroAUC +0.008 (p=1.2e-08), dece -0.033 (p=3.0e-07), dbrier -0.011 (p=1.2e-10)
+- N=400 vs B1-MLE: dmacroAUC +0.004 (p=2.4e-06), dece -0.008 (p=7.9e-04), dbrier -0.004 (p=1.3e-05)
+- N=400 vs B0-as-prior MAP: dmacroAUC +0.002 (p=1.1e-04), dece -0.005 (p=6.6e-02), dbrier -0.003 (p=8.6e-04)
+- N=400 vs logistic regression: dmacroAUC +0.037 (p=3.3e-14), dece -0.026 (p=7.6e-08), dbrier -0.044 (p=1.7e-14)
+- N=400 vs expert MAP (full table): dmacroAUC +0.002 (p=2.2e-05), dece -0.005 (p=4.5e-03), dbrier -0.002 (p=9.4e-05)
+- N=400 vs expert cMAP (full table): dmacroAUC +0.002 (p=3.3e-05), dece -0.005 (p=6.4e-03), dbrier -0.002 (p=1.0e-04)
+
+## realistic-expert crossing: B0-as-prior vs MLE
+- N=10: dacc +0.058 (p=0.00), dmacroAUC +0.125 (p=0.00), dece +0.013 (p=0.35), dbrier -0.075 (p=0.00)
+- N=50: dacc +0.022 (p=0.00), dmacroAUC +0.039 (p=0.00), dece -0.028 (p=0.04), dbrier -0.036 (p=0.00)
+- N=80: dacc +0.015 (p=0.00), dmacroAUC +0.022 (p=0.00), dece -0.028 (p=0.01), dbrier -0.025 (p=0.00)
+- N=100: dacc +0.011 (p=0.00), dmacroAUC +0.015 (p=0.00), dece -0.024 (p=0.01), dbrier -0.016 (p=0.00)
+- N=200: dacc +0.005 (p=0.00), dmacroAUC +0.004 (p=0.00), dece -0.009 (p=0.06), dbrier -0.004 (p=0.00)
+- N=400: dacc +0.002 (p=0.01), dmacroAUC +0.001 (p=0.00), dece -0.003 (p=0.32), dbrier -0.001 (p=0.00)

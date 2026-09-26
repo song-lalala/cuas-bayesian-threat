@@ -1,0 +1,37 @@
+[expF-ii] seed 1/6 done (4s)
+[expF-ii] seed 2/6 done (9s)
+[expF-ii] seed 3/6 done (14s)
+[expF-ii] seed 4/6 done (20s)
+[expF-ii] seed 5/6 done (25s)
+[expF-ii] seed 6/6 done (30s)
+# Exp-F: correlated failures and reliability miscalibration
+
+W-aware nuisance layer adds 15 free parameters (W parent on ['Rr', 'Re', 'Ra']).
+
+## (i) correlated failures (means over seeds)
+- s=0 (rho=-0.00): naive-CI acc 0.579 / AUC 0.819 / ECE 0.035   ||   W-aware acc 0.577 / AUC 0.819 / ECE 0.032
+    adverse subset: naive-CI acc 0.587 / AUC 0.822 / ECE 0.043   ||   W-aware acc 0.582 / AUC 0.820 / ECE 0.037
+- s=0.25 (rho=0.03): naive-CI acc 0.575 / AUC 0.815 / ECE 0.031   ||   W-aware acc 0.573 / AUC 0.815 / ECE 0.031
+    adverse subset: naive-CI acc 0.574 / AUC 0.812 / ECE 0.046   ||   W-aware acc 0.573 / AUC 0.812 / ECE 0.039
+- s=0.5 (rho=0.09): naive-CI acc 0.571 / AUC 0.810 / ECE 0.034   ||   W-aware acc 0.567 / AUC 0.812 / ECE 0.032
+    adverse subset: naive-CI acc 0.561 / AUC 0.802 / ECE 0.049   ||   W-aware acc 0.555 / AUC 0.803 / ECE 0.034
+- s=0.75 (rho=0.17): naive-CI acc 0.564 / AUC 0.806 / ECE 0.036   ||   W-aware acc 0.564 / AUC 0.809 / ECE 0.031
+    adverse subset: naive-CI acc 0.545 / AUC 0.792 / ECE 0.059   ||   W-aware acc 0.547 / AUC 0.794 / ECE 0.032
+- s=1 (rho=0.29): naive-CI acc 0.558 / AUC 0.800 / ECE 0.039   ||   W-aware acc 0.559 / AUC 0.806 / ECE 0.036
+    adverse subset: naive-CI acc 0.529 / AUC 0.780 / ECE 0.075   ||   W-aware acc 0.532 / AUC 0.782 / ECE 0.044
+
+## (ii-a) reliability miscalibration (nominal world)
+- reliability OFF reference: ECE 0.029, acc 0.585
+- alpha x0.5: ECE 0.028, acc 0.576, AUC 0.814
+- alpha x0.75: ECE 0.028, acc 0.580, AUC 0.817
+- alpha x1: ECE 0.027, acc 0.583, AUC 0.819
+- alpha x1.25: ECE 0.030, acc 0.584, AUC 0.820
+- alpha x1.5: ECE 0.030, acc 0.584, AUC 0.820
+
+## (ii-b) far-heavy context shift (alpha as trained)
+- far-heavy: ECE 0.036, acc 0.578, AUC 0.820
+- far-heavy-noRel: ECE 0.036, acc 0.580, AUC 0.822
+
+## (ii-c) P(e) monitoring (threshold = clean 5th pct)
+- flag rate: clean 0.050, adverse-correlated world 0.086, adverse-only tracks 0.148, far-heavy 0.048
+[expF] rel part DONE in 30s

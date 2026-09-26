@@ -1,0 +1,74 @@
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+ prior_noise  N method  T_mono_violation     acc      ece  macroAUC
+        0.15 20    MAP          0.003788 0.54265 0.066424  0.801291
+        0.15 20   cMAP          0.000000 0.54275 0.065952  0.801526
+        0.15 50    MAP          0.002525 0.55695 0.048044  0.807669
+        0.15 50   cMAP          0.000000 0.55695 0.047979  0.807734
+        0.50 20    MAP          0.042929 0.33685 0.288124  0.714048
+        0.50 20   cMAP          0.000000 0.33535 0.292753  0.724786
+        0.50 50    MAP          0.056818 0.37810 0.200009  0.740996
+        0.50 50   cMAP          0.000000 0.37675 0.204922  0.743483
+cmap solver: {'solved': 128, 'fallback': 0}

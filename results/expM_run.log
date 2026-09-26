@@ -1,0 +1,188 @@
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 1/20 (4s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 2/20 (9s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 3/20 (15s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 4/20 (20s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+D:\260630_advanced bayesian journal\cuas-bayesian-threat\grounding.py:324: RuntimeWarning: overflow encountered in exp
+  F = 1.0 / (1.0 + np.exp(-z))              # P(T<=t), t=0..K-2
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 5/20 (25s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 6/20 (30s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 7/20 (35s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 8/20 (40s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 9/20 (46s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 10/20 (51s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 11/20 (56s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 12/20 (61s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 13/20 (66s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 14/20 (71s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 15/20 (77s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 16/20 (82s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 17/20 (87s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 18/20 (93s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 19/20 (98s)
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+[expM] rep 20/20 (103s)
+# Exp-M: MAP-EM with latent H,N,C (C2-iii executed)
+
+- prior-only (B2): acc 0.512, AUC 0.780, ECE 0.103
+- N=50 MAP-EM (latent): acc 0.543(+-0.012), AUC 0.791, ECE 0.072, cwECE 0.058
+- N=50 fully-observed: acc 0.559(+-0.009), AUC 0.806, ECE 0.051, cwECE 0.047
+- N=200 MAP-EM (latent): acc 0.564(+-0.007), AUC 0.804, ECE 0.046, cwECE 0.039
+- N=200 fully-observed: acc 0.577(+-0.008), AUC 0.817, ECE 0.030, cwECE 0.031
+[expM] ALL DONE in 103s

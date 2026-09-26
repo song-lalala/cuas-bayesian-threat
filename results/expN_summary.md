@@ -1,0 +1,23 @@
+# Exp-N: sensitivity of the headline result to the world's aleatoric noise level (TAU_T)
+
+## TAU_T = 0.25  (oracle acc 0.629, AUC 0.850, ECE 0.018, FAR 0.415; majority 0.446)
+- N=10: Proposed 0.557/0.808/0.097 vs MLE 0.480/0.678/0.111  |  dacc +0.077*, dmacroAUC +0.131*, dece -0.014 , dbrier -0.102*
+- N=50: Proposed 0.586/0.828/0.056 vs MLE 0.567/0.790/0.098  |  dacc +0.020*, dmacroAUC +0.038*, dece -0.042*, dbrier -0.042*
+- N=200: Proposed 0.613/0.842/0.029 vs MLE 0.608/0.838/0.040  |  dacc +0.005 , dmacroAUC +0.005*, dece -0.011*, dbrier -0.005*
+- N=400: Proposed 0.618/0.846/0.024 vs MLE 0.617/0.843/0.028  |  dacc +0.001 , dmacroAUC +0.003*, dece -0.005*, dbrier -0.002*
+- five-fold check, Proposed(N=10) - MLE(N=50): dacc -0.009 (p=0.47), dmacroAUC +0.018 (p=0.01), dece -0.001 (p=0.93), dbrier +0.010 (p=0.56)
+
+## TAU_T = 0.4  (oracle acc 0.593, AUC 0.824, ECE 0.017, FAR 0.455; majority 0.434)
+- N=10: Proposed 0.534/0.793/0.077 vs MLE 0.457/0.661/0.111  |  dacc +0.077*, dmacroAUC +0.131*, dece -0.034*, dbrier -0.110*
+- N=50: Proposed 0.559/0.806/0.051 vs MLE 0.533/0.761/0.107  |  dacc +0.027*, dmacroAUC +0.045*, dece -0.055*, dbrier -0.051*
+- N=200: Proposed 0.577/0.817/0.030 vs MLE 0.571/0.810/0.044  |  dacc +0.006*, dmacroAUC +0.007*, dece -0.014*, dbrier -0.008*
+- N=400: Proposed 0.582/0.820/0.024 vs MLE 0.578/0.816/0.032  |  dacc +0.004*, dmacroAUC +0.004*, dece -0.008*, dbrier -0.004*
+- five-fold check, Proposed(N=10) - MLE(N=50): dacc +0.001 (p=0.93), dmacroAUC +0.032 (p=0.00), dece -0.030 (p=0.05), dbrier -0.016 (p=0.31)
+
+## TAU_T = 0.6  (oracle acc 0.507, AUC 0.751, ECE 0.015, FAR 0.557; majority 0.394)
+- N=10: Proposed 0.465/0.731/0.060 vs MLE 0.393/0.610/0.123  |  dacc +0.072*, dmacroAUC +0.121*, dece -0.062*, dbrier -0.105*
+- N=50: Proposed 0.487/0.740/0.046 vs MLE 0.448/0.685/0.134  |  dacc +0.039*, dmacroAUC +0.055*, dece -0.088*, dbrier -0.073*
+- N=200: Proposed 0.496/0.747/0.029 vs MLE 0.482/0.733/0.057  |  dacc +0.014*, dmacroAUC +0.014*, dece -0.028*, dbrier -0.016*
+- N=400: Proposed 0.501/0.749/0.023 vs MLE 0.491/0.741/0.038  |  dacc +0.010*, dmacroAUC +0.008*, dece -0.015*, dbrier -0.008*
+- five-fold check, Proposed(N=10) - MLE(N=50): dacc +0.017 (p=0.04), dmacroAUC +0.046 (p=0.00), dece -0.073 (p=0.00), dbrier -0.053 (p=0.00)
+

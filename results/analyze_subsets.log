@@ -1,0 +1,66 @@
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+C:\Users\ADMIN\AppData\Roaming\Python\Python314\site-packages\cvxpy\atoms\elementwise\log.py:50: RuntimeWarning: divide by zero encountered in log
+  return np.log(values[0])
+== (1) reliability on-off paired deltas (calib+reliab - calibrated) ==
+  silent-drone ece  : -0.0023 [-0.0097,+0.0051] p=0.526 (n=20)
+  silent-drone brier: +0.0049 [+0.0026,+0.0072] p=0.000 (n=20)
+  silent-drone acc  : -0.0051 [-0.0094,-0.0008] p=0.023 (n=20)
+  far-range    ece  : -0.0056 [-0.0095,-0.0017] p=0.008 (n=20)
+  far-range    brier: -0.0029 [-0.0043,-0.0015] p=0.000 (n=20)
+  far-range    acc  : +0.0029 [-0.0004,+0.0062] p=0.086 (n=20)
+  far-silent   ece  : +0.0033 [-0.0139,+0.0205] p=0.691 (n=20)
+  far-silent   brier: +0.0091 [+0.0042,+0.0141] p=0.001 (n=20)
+  far-silent   acc  : -0.0133 [-0.0239,-0.0027] p=0.017 (n=20)
+
+== (2) far-range full-subset rows (mean +- CIhalf) ==
+  abstract    : acc 0.559+-0.016, macroAUC 0.755+-0.010, brier 0.549+-0.011, ece 0.059+-0.014  n_sub~858
+  calibrated  : acc 0.567+-0.016, macroAUC 0.765+-0.009, brier 0.539+-0.009, ece 0.051+-0.011  n_sub~858
+  calib+reliab: acc 0.570+-0.017, macroAUC 0.767+-0.009, brier 0.536+-0.009, ece 0.045+-0.010  n_sub~858
+
+== (3) FAR@Pd=0.9 paired (calibrated - abstract) ==
+  dFAR = -0.0047 [-0.0089,-0.0004] p=0.034 (n=20)
+
+== (4) high-class reliability (P(T=high) bins; 20 draws, N=200) ==
+  bin (0.00,0.10]: predicted 0.021 -> observed 0.019 [0.018,0.021] (n=35874); oracle 0.019->0.018 (n=35980)
+  bin (0.10,0.25]: predicted 0.166 -> observed 0.178 [0.170,0.186] (n=8153); oracle 0.167->0.173 (n=8128)
+  bin (0.25,0.50]: predicted 0.349 -> observed 0.337 [0.323,0.350] (n=4605); oracle 0.346->0.353 (n=4584)
+  bin (0.50,0.75]: predicted 0.595 -> observed 0.545 [0.515,0.575] (n=1085); oracle 0.589->0.604 (n=1066)
+  bin (0.75,1.00]: predicted 0.836 -> observed 0.905 [0.864,0.936] (n=283); oracle 0.871->0.901 (n=242)
+saved results/expS_highclass_reliability.csv (20 draws, binomial CIs, oracle row)

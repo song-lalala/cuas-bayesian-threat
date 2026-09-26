@@ -1,6 +1,7 @@
 numpy
 scipy
 scikit-learn
+cvxpy          # constrained MAP (cmap_cpt); ships CLARABEL/OSQP/SCS
 matplotlib
 pandas
 torch   # only for rf_confusion.py (real-data RF calibration on DroneRF)

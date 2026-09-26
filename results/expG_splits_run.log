@@ -1,0 +1,3 @@
+[make-splits] held-out accuracy 0.8495
+[make-splits] wrote D:\260630_advanced bayesian journal\cuas-bayesian-threat\results\rf_cm_splitA.csv (n=681)
+[make-splits] wrote D:\260630_advanced bayesian journal\cuas-bayesian-threat\results\rf_cm_splitB.csv (n=681)

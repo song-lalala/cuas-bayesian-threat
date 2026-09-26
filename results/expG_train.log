@@ -1,0 +1,9 @@
+[expG] session-level split (227 capture sessions, H/L pairs kept together): train 2740 segs / val 680 / test 1120
+  epoch  5 val_acc=0.6132 (best 0.6191)
+  epoch 10 val_acc=0.7618 (best 0.7618)
+  epoch 15 val_acc=0.7721 (best 0.7824)
+  epoch 20 val_acc=0.8044 (best 0.8176)
+  epoch 25 val_acc=0.8206 (best 0.8221)
+  epoch 30 val_acc=0.8279 (best 0.8279)
+  epoch 35 val_acc=0.8235 (best 0.8279)
+[expG] checkpoint val_acc=0.8279; recording-level test_acc=0.8143

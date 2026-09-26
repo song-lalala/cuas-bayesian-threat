@@ -46,7 +46,22 @@ PARENTS = {
     "N": ["cls", "emit"],
     "C": ["d", "z"],
     "T": ["H", "N", "C"],
-    "Rr": ["cls"], "Re": ["cls"], "Ra": ["cls"], "Rf": ["cls", "emit"],
+    # World v2: the environment-sensitive sensors degrade with range d, so
+    # their GENERATIVE confusion tables are d-conditional. The deployed
+    # inference model still uses range-marginal tables plus reliability
+    # discounting (see dataio) -- that mismatch is exactly what the
+    # reliability layer exists to absorb.
+    "Rr": ["cls", "d"], "Re": ["cls", "d"], "Ra": ["cls", "d"],
+    "Rf": ["cls", "emit"],
+}
+# uniform-mixing degradation per sensor at d = (far, near, imminent):
+# a partial loss of discrimination at range (not total blindness), consistent
+# with the literature-informed reliability ordering (EO/IR and acoustic
+# degrade strongly at far range, radar mildly).
+SENSOR_DEGRADE = {
+    "Rr": (0.12, 0.03, 0.0),    # radar: range-robust
+    "Re": (0.45, 0.08, 0.0),    # EO/IR: needs pixels -> degraded far
+    "Ra": (0.50, 0.12, 0.0),    # acoustic: short-range
 }
 INTERNAL = ["H", "N", "C", "T"]           # CPTs grounded/learned in experiments
 OBSERVED = ["v", "rdot", "d", "z"]         # tracker/context evidence
@@ -117,35 +132,43 @@ def ground_truth_bn():
     return BayesNet(CARD, PARENTS, cpts)
 
 
-# ---------------- SENSOR CONFUSION MATRICES (measured/literature-informed) ----
+# ---------------- SENSOR CONFUSION MATRICES (literature-informed) ----
+# Base (best-condition) tables; the generative world mixes them toward
+# uniform with the per-range severities in SENSOR_DEGRADE (world v2).
+def _range_conditioned(name, base):
+    """Stack base confusion rows into a (cls, d, R) table using
+    SENSOR_DEGRADE[name]: adverse mixing toward uniform at far range."""
+    K = base.shape[-1]
+    gam = SENSOR_DEGRADE[name]
+    tab = np.stack([(1 - g) * base + g * (1.0 / K) for g in gam], axis=1)
+    return tab                                   # (cls, d, R)
+
+
 def _sensor_radar():
-    # Rr|cls rows over {drone,bird,clutter}; cls order clutter,bird,drone
-    tab = np.array([
+    base = np.array([
         [0.15, 0.20, 0.65],   # cls=clutter
         [0.20, 0.70, 0.10],   # cls=bird
         [0.82, 0.13, 0.05],   # cls=drone  (good micro-Doppler ID)
     ])
-    return Factor(("cls", "Rr"), tab)
+    return Factor(("cls", "d", "Rr"), _range_conditioned("Rr", base))
 
 
 def _sensor_eoir():
-    # Re|cls over {drone,bird,other}
-    tab = np.array([
+    base = np.array([
         [0.10, 0.15, 0.75],   # clutter->other
         [0.12, 0.80, 0.08],   # bird
         [0.85, 0.10, 0.05],   # drone
     ])
-    return Factor(("cls", "Re"), tab)
+    return Factor(("cls", "d", "Re"), _range_conditioned("Re", base))
 
 
 def _sensor_acoustic():
-    # Ra|cls over {drone,none}; short range, decent on drone
-    tab = np.array([
+    base = np.array([
         [0.10, 0.90],   # clutter
         [0.18, 0.82],   # bird (some rotor-like)
         [0.78, 0.22],   # drone
     ])
-    return Factor(("cls", "Ra"), tab)
+    return Factor(("cls", "d", "Ra"), _range_conditioned("Ra", base))
 
 
 def _sensor_rf():
@@ -187,15 +210,19 @@ def heuristic_cpts():
 
 def assemble_bn(internal_cpts, sensor_source=None):
     """Build a full BayesNet using given internal CPTs (H,N,C,T) and
-    ground-truth roots + sensors (or provided sensor CPTs)."""
+    ground-truth roots + sensors (or provided sensor CPTs). Sensor parents are
+    read from each supplied Factor's vars, so range-marginal estimates
+    (parents without d) assemble correctly."""
     gt = ground_truth_bn()
     cpts = dict(gt.cpts)
+    parents = {k: list(v) for k, v in PARENTS.items()}
     for k in INTERNAL:
         cpts[k] = internal_cpts[k]
     if sensor_source is not None:
         for s in SENSORS:
             cpts[s] = sensor_source[s]
-    return BayesNet(CARD, PARENTS, cpts)
+            parents[s] = list(sensor_source[s].vars[:-1])
+    return BayesNet(CARD, parents, cpts)
 
 
 if __name__ == "__main__":
