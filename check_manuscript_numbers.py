@@ -270,7 +270,7 @@ else:
 # older than the .tex it is built from.
 PDF_PAIRS = [(os.path.join(PAPER, stem + ".pdf"),
               os.path.join(PAPER, stem + ".tex"))
-             for stem in ("main", "main_diff", "main_highlight",
+             for stem in ("main", "main_diff", "main_marked",
                           "main_review", "cover_letter",
                           "differences_from_prior")
              if os.path.exists(os.path.join(PAPER, stem + ".tex"))]
@@ -468,6 +468,35 @@ else:
                      f"spec defines {list(_ms.STATES['T'])}")
 for _bad in set(rel["class"]) - set(_ms.STATES["T"]):
     fails.append(f"labels: results file invents threat level {_bad!r}")
+
+# ---- (d) build chains: every generated file must be newer than what it
+# was generated from. The marked copy is four steps from main.tex
+# (latexdiff -> make_highlight -> make_marked -> pdflatex) and the response
+# letter three (.md -> make_response_tex -> pdflatex); regenerating a source
+# and forgetting to rebuild what follows it is the failure this catches.
+_PR = os.path.join(PAPER, "peer review")
+CHAINS = [
+    ("main.tex", "main_diff.tex"),
+    ("main_diff.tex", "main_highlight.tex"),
+    ("main_highlight.tex", "main_marked.tex"),
+    ("main_marked.tex", "main_marked.pdf"),
+]
+_chain_paths = [(os.path.join(PAPER, a), os.path.join(PAPER, b))
+                for a, b in CHAINS]
+if LETTER:
+    _chain_paths += [
+        (LETTER, os.path.join(_PR, "response_to_reviewers.tex")),
+        (os.path.join(_PR, "response_to_reviewers.tex"),
+         os.path.join(_PR, "response_to_reviewers.pdf")),
+    ]
+for _src, _out in (_chain_paths if HAVE_PAPER else []):
+    _sn, _on = os.path.basename(_src), os.path.basename(_out)
+    if not os.path.exists(_src):
+        fails.append(f"chain: {_sn} missing")
+    elif not os.path.exists(_out):
+        fails.append(f"chain: {_on} missing -- regenerate it from {_sn}")
+    elif os.path.getmtime(_out) < os.path.getmtime(_src):
+        fails.append(f"chain: {_on} is older than {_sn} -- regenerate it")
 
 # ---- verdict (last: every check above must have had a chance to run) -----
 if fails:
