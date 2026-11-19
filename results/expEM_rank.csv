@@ -1,0 +1,6 @@
+what,params,rank,s_before_gap,s_after_gap
+"Q, 126 free parameters",126,112,0.01847907366141573,2.665040669083487e-15
+"Q, T known, 72 free parameters",72,72,0.051210125946042136,0.0
+"P(T, reports | inputs), 126 free parameters",126,112,0.001556781830487445,4.819695857828773e-16
+"P(T, reports | inputs), T known, 72 free parameters",72,72,0.0053455519748680895,0.0
+recoding tangents,14,14,,4.389214395246859e-16

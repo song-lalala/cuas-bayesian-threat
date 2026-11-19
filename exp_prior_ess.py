@@ -1,7 +1,7 @@
 """
 Exp-E v2: sensitivity to prior quality and ESS; when constraints help.
 
-(R1-5, R1-6, R1-11; revised for this resubmission: 20 independent
+(Version 2: 20 independent
 seeds throughout, regime maps for BOTH alpha0=8 and alpha0=50, text and
 figures generated from the same files.)
 

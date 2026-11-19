@@ -1,21 +1,21 @@
 """
-Main experimental study (revision v2): every headline table/figure from ONE
+Main experimental study (v2): every headline table/figure from ONE
 protocol -- S=20 independent replications, each redrawing the training sets,
 the calibration split (confusion estimates + fitted reliability), and the
-2500-scenario test draw. All manuscript numbers in Tables 3-5, Fig. 3, the
-calibration-size table, and the abstract-diagonal sweep come from this
+2500-scenario test draw. All manuscript numbers in Tables 4, 6 and 7, Fig. 3
+and the abstract-diagonal sweep come from this
 script's results/ files.
 
 Per replication:
   scarcity  : methods {B0, B1-MLE, B2-expert, MAP, cMAP-full, Proposed}
-              x N in {10,20,50,100,200,400}; ESS selected by held-out
-              log-loss per (N, replication); paired Proposed-vs-MLE and
+              x N in {10,20,50,100,200,400}; ESS fixed at alpha_0 = 2
+              (pipeline.ESS_FIXED); paired Proposed-vs-MLE and
               Proposed-vs-B2 deltas with tests.
   fusion    : single sensors vs abstract vs calibrated vs calibrated+fitted
-              reliability (Table 4) + per-class paired DeLong, McNemar,
+              reliability (Table 6) + per-class paired DeLong, McNemar,
               scenario-level paired bootstraps.
   ablation  : full / -ICI / -constraints / -prior / -reliability at N=80.
-  calibsize : confusion-estimation split size sweep (Table 5).
+  calibsize : confusion-estimation split size sweep (Table 7).
   absweep   : abstract-model diagonal 0.70..0.99 sensitivity (baseline
               fairness check).
 Also logs the majority-class baseline, the test class distribution, the
@@ -167,7 +167,7 @@ def run(reps=20, B=1000):
         ycls = np.array([s["T"] for s in test])
         majority = float(np.bincount(ycls, minlength=4).max() / len(ycls))
 
-        # ---- scarcity (Table 3 + Fig 3) --------------------------------
+        # ---- scarcity (Table 4 + Fig 3) --------------------------------
         for N in N_GRID:
             data = dataio.generate_dataset(gt, N, seed=r)
             posts = {}
@@ -189,7 +189,7 @@ def run(reps=20, B=1000):
                                 "dAUC": dA, "dECE": dE, "mcnemar_b": bb,
                                 "mcnemar_c": cc, "mcnemar_p": pp})
 
-        # ---- fusion (Table 4) ------------------------------------------
+        # ---- fusion (Table 6) ------------------------------------------
         data = dataio.generate_dataset(gt, FUSION_N, seed=r)
         cpts, _ = pl.ground_internal("Proposed", data, r, gt=gt)
         fus_cfgs = [
@@ -249,7 +249,7 @@ def run(reps=20, B=1000):
                     "brier": mt.brier(Pmm, ys),
                     "cwece": mt.classwise_ece(Pmm, ys)})
 
-        # ---- ablation (Table 5-style block; N=80) ----------------------
+        # ---- ablation (Sec. VII-B; N=80) -------------------------------
         dataA = dataio.generate_dataset(gt, ABLATION_N, seed=r)
         abl_variants = [
             ("Proposed (full)",  "Proposed",                est, alpha),
@@ -346,7 +346,7 @@ def summarize(reps, B):
     mj = sca[sca.method == "Proposed"]["majority"].mean()
     lines.append(f"- majority-class baseline accuracy: {mj:.3f}")
 
-    lines.append("\n## Table 3 (acc/ECE/AUC mean +- 95%CI half)")
+    lines.append("\n## Table 4 (acc/ECE/AUC mean +- 95%CI half)")
     for N in TABLE3_NS:
         row = [f"N={N}"]
         for m in ["B0-heuristic", "B1-MLE", "B2-expert", "Proposed"]:
@@ -359,7 +359,7 @@ def summarize(reps, B):
                               "far": pm(d, "far@pd0.9")[0],
                               "cwece": pm(d, "cwece")[0]})
         lines.append("- " + " | ".join(row))
-    lines.append(f"\n## ESS: fixed a priori at alpha0={sca['ess'].iloc[0]:g} "
+    lines.append(f"\n## ESS: fixed at alpha0={sca['ess'].iloc[0]:g} "
                  "(no validation labels consumed by the main pipeline)")
     for ref in ("B1-MLE", "B2-expert"):
         lines.append(f"\n## Proposed vs {ref} paired deltas")
@@ -374,7 +374,7 @@ def summarize(reps, B):
                 f"dECE {rE['mean']:+.4f} [{rE['lo']:+.4f},{rE['hi']:+.4f}] "
                 f"(t p={rE['t_p']:.1e}); McNemar sig {(mcp < 0.05).sum()}/{len(mcp)}")
 
-    lines.append("\n## Table 4 (acc/F1/AUC/Brier/ECE/cwECE/FAR mean +- CIhalf)")
+    lines.append("\n## Table 6 (acc/F1/AUC/Brier/ECE/cwECE/FAR mean +- CIhalf)")
     for cfg in fus[~fus.config.str.startswith("_")].config.unique():
         d = fus[fus.config == cfg]
         vals = []

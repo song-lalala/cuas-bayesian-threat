@@ -1,0 +1,6 @@
+Proposed against expS_scarcity_raw.csv: max |difference| 0.00e+00 over 840 values
+B0-as-prior MAP against expB_baselines_raw.csv: max |difference| 0.00e+00 over 700 values
+Proposed-EM against expM_raw.csv: max |difference| 0.00e+00 over 280 values
+old diagonals against expS_absweep_raw.csv: max |difference| 0.00e+00 over 400 values
+replication 0 rerun in the parent process equals the pool's rows: True
+threads per worker: OMP 1, MKL 1, OpenBLAS 1; workers 20; elapsed 46s

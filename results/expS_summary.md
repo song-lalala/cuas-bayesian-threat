@@ -3,13 +3,13 @@
 ## class distribution / majority baseline
 - majority-class baseline accuracy: 0.434
 
-## Table 3 (acc/ECE/AUC mean +- 95%CI half)
+## Table 4 (acc/ECE/AUC mean +- 95%CI half)
 - N=10 | B0-heuristic: 0.450+-0.004/0.098+-0.004/0.784+-0.002 | B1-MLE: 0.457+-0.025/0.111+-0.014/0.661+-0.023 | B2-expert: 0.512+-0.028/0.103+-0.030/0.780+-0.012 | Proposed: 0.534+-0.021/0.077+-0.026/0.793+-0.009
 - N=50 | B0-heuristic: 0.450+-0.004/0.098+-0.004/0.784+-0.002 | B1-MLE: 0.533+-0.011/0.107+-0.018/0.761+-0.008 | B2-expert: 0.512+-0.028/0.103+-0.030/0.780+-0.012 | Proposed: 0.559+-0.009/0.051+-0.013/0.806+-0.004
 - N=200 | B0-heuristic: 0.450+-0.004/0.098+-0.004/0.784+-0.002 | B1-MLE: 0.571+-0.007/0.044+-0.005/0.810+-0.002 | B2-expert: 0.512+-0.028/0.103+-0.030/0.780+-0.012 | Proposed: 0.577+-0.008/0.030+-0.005/0.817+-0.003
 - N=400 | B0-heuristic: 0.450+-0.004/0.098+-0.004/0.784+-0.002 | B1-MLE: 0.578+-0.007/0.032+-0.006/0.816+-0.003 | B2-expert: 0.512+-0.028/0.103+-0.030/0.780+-0.012 | Proposed: 0.582+-0.007/0.024+-0.003/0.820+-0.003
 
-## ESS: fixed a priori at alpha0=2 (no validation labels consumed by the main pipeline)
+## ESS: fixed at alpha0=2 (no validation labels consumed by the main pipeline)
 
 ## Proposed vs B1-MLE paired deltas
 - N=10: dAUC +0.1311 [+0.1068,+0.1554] (t p=7.2e-10, W p=1.9e-06); dECE -0.0341 [-0.0632,-0.0050] (t p=2.4e-02); McNemar sig 19/20
@@ -23,7 +23,7 @@
 - N=200: dAUC +0.0368 [+0.0256,+0.0481] (t p=1.6e-06, W p=1.9e-06); dECE -0.0727 [-0.1008,-0.0446] (t p=3.2e-05); McNemar sig 16/20
 - N=400: dAUC +0.0399 [+0.0285,+0.0513] (t p=6.0e-07, W p=1.9e-06); dECE -0.0785 [-0.1074,-0.0497] (t p=1.7e-05); McNemar sig 17/20
 
-## Table 4 (acc/F1/AUC/Brier/ECE/cwECE/FAR mean +- CIhalf)
+## Table 6 (acc/F1/AUC/Brier/ECE/cwECE/FAR mean +- CIhalf)
 - radar only: acc 0.555+-0.008, macroF1 0.445+-0.014, macroAUC 0.797+-0.003, brier 0.550+-0.005, ece 0.034+-0.005, cwece 0.031+-0.003, far@pd0.9 0.506+-0.012
 - RF only: acc 0.532+-0.008, macroF1 0.387+-0.009, macroAUC 0.770+-0.003, brier 0.576+-0.004, ece 0.031+-0.006, cwece 0.031+-0.003, far@pd0.9 0.593+-0.013
 - EO/IR only: acc 0.555+-0.008, macroF1 0.452+-0.013, macroAUC 0.798+-0.002, brier 0.550+-0.004, ece 0.030+-0.003, cwece 0.032+-0.003, far@pd0.9 0.522+-0.015

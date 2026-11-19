@@ -4,4 +4,6 @@ scikit-learn
 cvxpy          # constrained MAP (cmap_cpt); ships CLARABEL/OSQP/SCS
 matplotlib
 pandas
-torch   # only for rf_confusion.py (real-data RF calibration on DroneRF)
+torch   # the real-data CNN studies: rf_confusion.py, exp_rf_e2e.py, exp_rf_independent.py, exp_eo_independent.py
+av      # exp_eo_independent.py: decoding the infrared clips
+openpyxl        # exp_eo_independent.py: the dataset's description spreadsheet

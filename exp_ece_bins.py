@@ -3,7 +3,7 @@ Exp-K: is the headline calibration number an artifact of the bin count?
 
 The manuscript reports top-label ECE with 15 equal-width bins. That choice
 is conventional but arbitrary, and with four classes and 2,500 test
-scenarios a reviewer is entitled to ask whether the number moves when the
+scenarios a reader is entitled to ask whether the number moves when the
 bin count moves. This sweeps it over the deployed pipeline (Proposed CPTs,
 estimated confusion matrices, fitted reliability) on the same 20
 replications as everything else, and reports the CPT-oracle alongside so

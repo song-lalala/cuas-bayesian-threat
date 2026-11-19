@@ -1,0 +1,13 @@
+sensors,K,fusion,largest,largest_vars,largest_with_W,largest_with_W_vars
+3,2,naive-CI,72,H N C T,0,
+3,2,W-observed,72,H N C T,0,
+3,2,W-latent,72,H N C T,48,N W C T
+4,2,naive-CI,72,H N C T,0,
+4,2,W-observed,72,H N C T,0,
+4,2,W-latent,72,H N C T,48,N W C T
+4,3,naive-CI,72,H N C T,0,
+4,3,W-observed,72,H N C T,0,
+4,3,W-latent,72,H N C T,72,N W C T
+4,4,naive-CI,72,H N C T,0,
+4,4,W-observed,72,H N C T,0,
+4,4,W-latent,96,N W C T,96,N W C T

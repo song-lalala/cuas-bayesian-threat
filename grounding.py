@@ -339,7 +339,7 @@ def ordinal_ici_cpt(node, data, prior_mean: Factor, ess: float, restarts=4,
     CONSTRUCTION in every parent. Fitted to the pseudo-counts
     c = n + ess*prior by maximum likelihood (L-BFGS, multi-start).
     Free parameters: sum_p (r_p - 1) effects + (K-1) thresholds + 1 sharpness
-    -- linear in the number of parents (8 for the threat node vs 54 full)."""
+    -- linear in the number of parents (9 for the threat node, 8 identifiable, vs 54 full)."""
     pa = ms.PARENTS[node]
     K = ms.CARD[node]
     pa_cards = [ms.CARD[p] for p in pa]

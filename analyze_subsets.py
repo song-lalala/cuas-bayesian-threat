@@ -1,10 +1,10 @@
 """
-Post-analysis for the revision (runs on expS raw files; separate from the
+Post-analysis (runs on expS raw files; separate from the
 experiment scripts so it never races the freshness gate):
-  1) reliability on-vs-off paired tests on the hard subsets (N4)
-  2) far-range full-subset rows for Table 5 (N4)
-  3) FAR@Pd paired test calibrated-vs-abstract (N6)
-  4) high-class reliability table: predicted vs observed P(T=high) bins (N6)
+  1) reliability on-vs-off paired tests on the hard subsets
+  2) far-range full-subset rows of Table 6
+  3) FAR@Pd paired test calibrated-vs-abstract
+  4) high-class reliability table: predicted vs observed P(T=high) bins
 """
 from __future__ import annotations
 import os

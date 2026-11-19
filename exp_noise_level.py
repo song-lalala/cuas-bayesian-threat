@@ -1,12 +1,12 @@
 """
-Exp-N (new-reviewer round): does the headline conclusion depend on how noisy
+Exp-N: does the headline conclusion depend on how noisy
 the evaluation world is?
 
 The generative world's threat node uses an ordinal-response sharpness
 TAU_T = 0.40, which leaves substantial aleatoric overlap between adjacent
 threat levels -- so much that the CPT-oracle itself reaches only ~0.59
-accuracy and ~0.46 FAR at Pd = 0.9. That level was a design choice and the
-manuscript owed the reader both a justification and a sensitivity check.
+accuracy and ~0.46 FAR at Pd = 0.9. That level was a design choice, so its effect is
+checked here.
 
 This script rebuilds the world at TAU_T in {0.25, 0.40, 0.60} (sharper,
 as reported, and blurrier) and re-runs the scarcity comparison -- Proposed
@@ -99,7 +99,7 @@ def summarize():
                          f"{p['macroAUC'].mean():.3f}/{p['ece'].mean():.3f} vs "
                          f"MLE {m['acc'].mean():.3f}/{m['macroAUC'].mean():.3f}/"
                          f"{m['ece'].mean():.3f}  |  " + ", ".join(out))
-        # five-fold crossing check: Proposed(10) vs MLE(50)
+        # Proposed(10) vs MLE(50)
         p10 = d[(d.N == 10) & (d.method == "Proposed")].set_index("rep")
         m50 = d[(d.N == 50) & (d.method == "B1-MLE")].set_index("rep")
         ix = p10.index.intersection(m50.index)
@@ -108,7 +108,7 @@ def summarize():
             delta = (p10.loc[ix, k] - m50.loc[ix, k]).dropna().values
             out.append(f"d{k} {delta.mean():+.3f} "
                        f"(p={st.ttest_1samp(delta, 0).pvalue:.2f})")
-        lines.append("- five-fold check, Proposed(N=10) - MLE(N=50): "
+        lines.append("- Proposed(N=10) - MLE(N=50): "
                      + ", ".join(out))
         lines.append("")
     txt = "\n".join(lines)

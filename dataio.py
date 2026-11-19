@@ -9,7 +9,7 @@ a labelled calibration split, plus a reliability layer alpha_s(d) fitted by
 logistic regression on the same split (correct-vs-incorrect sensor decisions
 against the range context). The structural mismatch is deliberate: it is the
 situation the reliability discounting exists to absorb, and it makes the
-reliability layer testable (cf. reviewer comment on vacuous reliability).
+reliability layer testable rather than vacuous.
 
 The generator samples labelled scenarios from the ground-truth BN; each
 scenario has observed tracker/context evidence (v,rdot,d,z), sensor reports
@@ -55,7 +55,7 @@ def estimate_confusion(calib_data, smoothing=0.5):
     """DEPLOYED-pipeline estimate: each sensor's range-MARGINAL confusion CPT
     P(R_s | class parents), counted over a LABELLED calibration subset of the
     same world (Dirichlet/Laplace smoothing). Identical procedure whether the
-    labelled data come from the synthetic world, AirSim, or a public
+    labelled data come from the synthetic world or a public
     dataset."""
     return {s: _count_cpt(calib_data, s, MARGINAL_PARENTS[s], smoothing)
             for s in ms.SENSORS}
@@ -136,9 +136,9 @@ def _discount_cpt(cpt: Factor, alpha: float) -> Factor:
 
 
 def abstract_sensor_cpts():
-    """B0's 'abstract sensor model': over-confident identity-like mapping that
+    """The 'abstract sensor model', a stand-in of ours: over-confident identity-like mapping that
     assumes each report equals the natural report for the true class with
-    probability `diag` (default 0.94), ignoring measured confusion and
+    probability `diag` (default 0.94), ignoring the estimated confusion and
     silent-drone blindness. Range-marginal parents. `diag` is swept in the
     baseline-sensitivity study."""
     return abstract_sensor_cpts_diag(0.94)

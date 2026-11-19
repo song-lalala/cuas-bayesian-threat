@@ -1,0 +1,4 @@
+self-test checks passed: 82
+path check against expF_corr_raw.csv (three sensors, K = 2, s = 1): max |difference| 0.00e+00 over 540 values
+K = 4, seed 0 rerun in the parent process equals the pool's rows: True
+cells: 80; threads per worker: OMP 1; workers 20; elapsed 20s

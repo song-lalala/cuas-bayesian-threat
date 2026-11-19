@@ -1,0 +1,47 @@
+manifest: 1391 files match their SHA-256
+box CSV ir_boxes_v1.0.0.csv: SHA-256 14c663b0abb09824abbd0af76abcb13ee22d22217b0e9caf8fc6fb6d7fc81b0b, 119475 box rows, 365 label files, labels ['AIRPLANE', 'BIRD', 'DRONE', 'HELICOPTER']
+boxes by clip class (rows) and label (columns):
+label       AIRPLANE   BIRD  DRONE  HELICOPTER
+ccls                                          
+AIRPLANE       23243      0      0           0
+BIRD               0  28527      0           0
+DRONE              0    146  50606           0
+HELICOPTER         0      0      0       16953
+boxes whose label differs from the clip class (ignored): 146; DRONE_096 76 (bin MEDIUM, session 119), DRONE_101 21 (bin CLOSE, session 119), DRONE_104 49 (bin DISTANT, session 119)
+rows with several boxes of the clip class (largest used): 4452
+decoded frames, all clips: 114095; last boxed row = decoded frame count in 362/365 clips; others (last boxed row - frames): DRONE_067 -2, HELICOPTER_006 -1, HELICOPTER_034 -1
+label time = (row - 1)/30 + video stream start time in 365/365 clips; stream start 0 s in 349 clips and 1/30 s in 16; frames are matched by row (frame = row - 1); round(time_s * 30) would be one frame late in those 16
+G1 criterion: sampled windows with a box of the clip class 3650/3650 = 1.0000 (>= 0.95: pass); the sampled frame is the first frame of its window in 3650/3650
+box sizes of the sampled frames (pixels; side = max(w, h)), by class and bin:
+                      n  w_median  w<5  w>=15  side_median  side_p90  side_p95  side_max  side>64
+cls        bin                                                                                   
+AIRPLANE   CLOSE     90    30.008    0  0.956       30.008    48.200    53.401   134.129        2
+           MEDIUM   250    17.514    0  0.688       17.514    24.558    27.328    42.000        0
+           DISTANT  400    14.000    0  0.450       14.000    24.959    28.918    52.914        0
+BIRD       CLOSE    100    19.707    0  0.870       20.000    25.121    26.183    32.824        0
+           MEDIUM   230    15.000    0  0.543       15.033    20.045    22.000    27.000        0
+           DISTANT  460    13.490    0  0.237       13.599    16.000    16.700    21.000        0
+DRONE      CLOSE    240    29.323    0  1.000       29.323    42.374    45.062   104.625        2
+           MEDIUM   940    18.048    0  0.874       18.109    24.000    25.245    30.074        0
+           DISTANT  390    14.087    0  0.423       14.087    18.303    20.858    26.474        0
+HELICOPTER CLOSE    150    40.500    0  1.000       40.500    74.530    83.135    89.326       33
+           MEDIUM   200    24.000    0  0.965       24.000    29.758    32.001    36.000        0
+           DISTANT  200    15.214    0  0.535       15.257    22.156    24.618    27.212        0
+c3: sampled frames with side > 64 (resized to 64x64): 37/3650 = 0.0101; AIRPLANE/CLOSE 2 (0.022 of the cell), DRONE/CLOSE 2 (0.008 of the cell), HELICOPTER/CLOSE 33 (0.220 of the cell)
+share of sampled frames left out of G2 for a mask of side M (box side > M - 4):
+                     M=16   M=24   M=32   M=40   M=48
+cls        bin                                       
+AIRPLANE   CLOSE    0.967  0.956  0.689  0.322  0.144
+           MEDIUM   0.936  0.248  0.040  0.028  0.000
+           DISTANT  0.718  0.220  0.052  0.028  0.025
+BIRD       CLOSE    1.000  0.430  0.050  0.000  0.000
+           MEDIUM   0.900  0.100  0.000  0.000  0.000
+           DISTANT  0.826  0.004  0.000  0.000  0.000
+DRONE      CLOSE    1.000  0.929  0.575  0.179  0.062
+           MEDIUM   0.984  0.300  0.021  0.000  0.000
+           DISTANT  0.700  0.064  0.000  0.000  0.000
+HELICOPTER CLOSE    1.000  1.000  0.973  0.627  0.453
+           MEDIUM   0.995  0.825  0.120  0.000  0.000
+           DISTANT  0.805  0.195  0.000  0.000  0.000
+ALL                 0.888  0.325  0.117  0.050  0.029
+per-label-file provenance (manifest SHA-256 of the label file, frames, boxes): expO_g1_label_files.csv (365 rows)

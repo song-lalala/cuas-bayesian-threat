@@ -1,5 +1,5 @@
 """
-Table-5 (calibration-set size) cells re-evaluated over the same 20 independent
+Table 7 (calibration-set size) cells re-evaluated over the same 20 independent
 replications as exp_significance.py, so all headline tables carry means +/-
 95% CIs. Writes results/expS_calibsize_raw.csv and prints the summary.
 """

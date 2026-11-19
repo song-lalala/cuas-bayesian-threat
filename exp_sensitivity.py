@@ -1,5 +1,5 @@
 """
-Exp-T: one-way sensitivity (tornado) and credal intervals on the
+Exp-T: one-way sensitivity (tornado) and a one-at-a-time envelope on the
 linear-fractional posterior (C4 executed).
 
 Any BN posterior is a linear-fractional function of a single CPT entry
@@ -8,8 +8,8 @@ the column. For the worked-track evidence e* we (1) recover the
 linear-fractional coefficients of P(T=high | e*) for every learned internal
 CPT entry from three exact evaluations, (2) rank parameters by the posterior
 swing over x in [theta-0.1, theta+0.1] (clipped to [0.001, 0.999]) --
-the tornado -- and (3) wrap the top-5 parameters in +-0.1 credal intervals,
-reporting the one-at-a-time posterior bounds.
+the tornado -- and (3) move the top-5 parameters one at a time over +-0.1,
+reporting the one-at-a-time envelope of the posterior.
 
 Run:  python exp_sensitivity.py       (~1 min)
 Outputs: results/expT_summary.md, results/fig_expT_tornado.png
@@ -124,14 +124,14 @@ def main():
                      f"P in [{min(r['p_lo'], r['p_hi']):.3f}, "
                      f"{max(r['p_lo'], r['p_hi']):.3f}] "
                      f"(swing {r['swing']:+.3f})")
-    lines.append("\n## credal bounds (top-5, one-at-a-time +-0.1)")
+    lines.append("\n## one-at-a-time envelope (top-5, +-0.1)")
     w_lo = min(min(r["p_lo"], r["p_hi"]) for r in rows[:5])
     w_hi = max(max(r["p_lo"], r["p_hi"]) for r in rows[:5])
     lines.append(f"- one-at-a-time envelope over the top-5 parameters: "
                  f"P(T=high|e*) in [{w_lo:.3f}, {w_hi:.3f}] "
                  f"(baseline {p0:.3f}) -- the threat decision "
                  f"{'is' if w_lo > 0.5 else 'is NOT'} invariant over the "
-                 f"credal set at the 0.5 decision level")
+                 f"envelope at the 0.5 decision level")
 
     fig, ax = plt.subplots(figsize=(7.0, 5.2))
     ypos = np.arange(len(top))[::-1]

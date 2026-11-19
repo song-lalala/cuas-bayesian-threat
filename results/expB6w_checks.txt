@@ -1,0 +1,6 @@
+Proposed against the expW files: max |difference| 0.00e+00 over 720 values
+cMAP-full against the expW files: max |difference| 0.00e+00 over 720 values
+CPT-oracle against the expW files: max |difference| 0.00e+00 over 360 values
+Proposed-adaptive against the expW files: max |difference| 0.00e+00 over 720 values
+nonadd-1.0 replication 0 rerun in the parent process equals the pool's rows: True
+threads per worker: OMP 1; workers 20; elapsed 97s

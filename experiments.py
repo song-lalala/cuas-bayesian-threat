@@ -245,7 +245,7 @@ if __name__ == "__main__":
 
     # write a consolidated markdown report
     with open(os.path.join(RES, "RESULTS.md"), "w", encoding="utf-8") as f:
-        f.write("# Experimental results (synthetic digital-twin study)\n\n")
+        f.write("# Experimental results (synthetic study)\n\n")
         f.write(f"Test set: {TEST_N} held-out scenarios (seed {TEST_SEED}); ESS={ESS}. "
                 "Oracle = true CPTs.\n\n")
         f.write("## Oracle (upper bound)\n\n")

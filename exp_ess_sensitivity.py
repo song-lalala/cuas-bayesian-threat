@@ -1,9 +1,9 @@
 """
-Exp-A (3rd revision): is the headline sample-efficiency claim an artifact of
-the chosen ESS? Recompute the Table-4 comparison over the SAME 20
-replications at alpha_0 in {1, 2, 5} -- the flat plateau of Fig. 5 -- and
+Exp-A: is the headline sample-efficiency claim an artifact of
+the chosen ESS? Recompute the comparison of Table 4 over the SAME 20
+replications at alpha_0 in {1, 2, 5} -- the flat plateau of Fig. S2 -- and
 report the Proposed(N=10) vs MLE(N=50) contrast per metric, plus the
-Proposed-vs-MLE crossings that define the "fold-reduction" claim.
+Proposed-vs-MLE crossings behind the descriptive factor of Sec. VII-B.
 
 Also records the class-prior (constant) predictor and the CPT-oracle as
 results files, so both baselines live in results/ rather than only in prose.

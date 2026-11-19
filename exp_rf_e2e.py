@@ -2,14 +2,15 @@
 Exp-G v2: end-to-end effect of the DroneRF-measured RF channel, with REAL
 samples passing through the pipeline at test time.
 
-Revised design (addresses the circularity critique of the earlier
-matrix-resampling version):
-  * The DroneRF segments are split by RECORDING (source CSV file), stratified
-    by class: 60% train / 15% validation / 25% test. No segment of a test
-    recording is seen in training or validation (no segment-level leakage).
+Design (real samples, not a resampled matrix):
+  * The DroneRF segments are split BY SEGMENT (the high- and low-band files of
+    a segment stay together), stratified by class: 60% train / 15% validation
+    / 25% test. Other segments of the same continuous recording fall on the
+    other side of the split, so this measures within-recording generalization
+    (Sec. VII-C); exp_rf_independent.py runs the stricter splits.
   * The compact CNN of Sec. VII-C is trained on the train split; the
     checkpoint is selected on the VALIDATION split (never the test split).
-  * Mixed world: scenarios come from the synthetic generative proxy; the RF
+  * Mixed world: scenarios come from the synthetic generative world; the RF
     channel is realized by drawing an actual held-out spectrogram of the
     mapped DroneRF class (emitting drone -> a random drone model; silent
     drone and non-drone targets -> background) and passing it through the
@@ -57,19 +58,19 @@ SEED = 42
 
 # ---------------------------------------------------------------- training
 def session_key(fname):
-    """DroneRF source files come in high/low-band PAIRS per capture session
-    (e.g. 00000H_13.csv and 00000L_13.csv). Grouping by the session key
-    (BUI code + capture index, band letter dropped) keeps both bands of a
-    session in the same split -- the leakage unit is the capture, not the
-    file."""
+    """DroneRF source files come in high/low-band PAIRS per segment (e.g.
+    00000H_13.csv and 00000L_13.csv). Grouping by this key (BUI code + segment
+    index, band letter dropped) keeps both bands of a segment in the same
+    split. A segment is a cut of a continuous recording, so segments of one
+    recording fall on both sides of the split."""
     import re
     m = re.match(r"^(\d+)[HL]_(\d+)\.csv$", fname)
     return f"{m.group(1)}_{m.group(2)}" if m else fname
 
 
 def group_split(files, y, rng, frac_train=0.60, frac_val=0.15):
-    """Session-level stratified split: assign capture SESSIONS (H/L file
-    pairs) to train/val/test within each class."""
+    """Segment-level stratified split: assign segments (H/L file pairs) to
+    train/val/test within each class."""
     sessions = np.array([session_key(f) for f in files])
     part = {}
     for c in np.unique(y):
@@ -100,7 +101,7 @@ def train_and_cache(npz_path):
     split = group_split(files, y, np.random.default_rng(SEED))
     itr, iva, ite = (split == "train"), (split == "val"), (split == "test")
     n_sess = len(set(session_key(f) for f in files))
-    print(f"[expG] session-level split ({n_sess} capture sessions, H/L pairs "
+    print(f"[expG] segment-level split ({n_sess} segments, H/L pairs "
           f"kept together): train {itr.sum()} segs / val {iva.sum()} / "
           f"test {ite.sum()}")
     from rf_confusion import CNN
@@ -133,7 +134,7 @@ def train_and_cache(npz_path):
         sm_te = torch.softmax(net(torch.from_numpy(X[ite]).unsqueeze(1)),
                               1).numpy()
     acc_te = float((sm_te.argmax(1) == y[ite]).mean())
-    print(f"[expG] checkpoint val_acc={best:.4f}; recording-level "
+    print(f"[expG] checkpoint val_acc={best:.4f}; segment-level "
           f"test_acc={acc_te:.4f}")
     np.savez_compressed(
         CNN_CACHE,
@@ -322,7 +323,7 @@ def summarize():
     df = pd.read_csv(os.path.join(RES, "expG_rf_e2e_raw.csv"))
     reps = df.rep.nunique()
     lines = [f"# Exp-G v2: real-sample end-to-end RF study (reps={reps})", "",
-             f"- CNN (recording-level split): val_acc {float(cc['val_acc']):.4f}, "
+             f"- CNN (segment-level split): val_acc {float(cc['val_acc']):.4f}, "
              f"test_acc {float(cc['test_acc']):.4f}"]
 
     def ci(d, k):

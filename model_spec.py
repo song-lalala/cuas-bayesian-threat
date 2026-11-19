@@ -1,6 +1,6 @@
 """
 C-UAS hierarchical threat model specification (structure + ground-truth CPTs,
-expert-prior CPTs, heuristic baseline CPTs, and measured sensor confusion
+expert-prior CPTs, heuristic baseline CPTs, and hand-set sensor confusion
 matrices). Ground-truth CPTs are generated from monotone ordinal-response
 functions so that threat is provably monotone in the threatening direction of
 each parent -- which is exactly the domain knowledge the monotonicity
@@ -56,7 +56,7 @@ PARENTS = {
 }
 # uniform-mixing degradation per sensor at d = (far, near, imminent):
 # a partial loss of discrimination at range (not total blindness), consistent
-# with the literature-informed reliability ordering (EO/IR and acoustic
+# with a hand-set reliability ordering (EO/IR and acoustic
 # degrade strongly at far range, radar mildly).
 SENSOR_DEGRADE = {
     "Rr": (0.12, 0.03, 0.0),    # radar: range-robust
@@ -132,7 +132,7 @@ def ground_truth_bn():
     return BayesNet(CARD, PARENTS, cpts)
 
 
-# ---------------- SENSOR CONFUSION MATRICES (literature-informed) ----
+# ---------------- SENSOR CONFUSION MATRICES (hand-set) ----
 # Base (best-condition) tables; the generative world mixes them toward
 # uniform with the per-range severities in SENSOR_DEGRADE (world v2).
 def _range_conditioned(name, base):

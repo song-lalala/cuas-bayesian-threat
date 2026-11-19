@@ -1,18 +1,15 @@
 """
-Exp-B (new-reviewer round): standard baselines and a realistic-expert prior.
+Exp-B: standard baselines and a realistic-expert prior.
 
-The manuscript's original comparison set was entirely author-constructed
-(B0 surrogate, unsmoothed MLE, prior-only, abstract sensor model). A reader
-cannot then tell whether the sample-efficiency gain comes from the expert
-knowledge or merely from smoothing, and the introduction's claim that
-discriminative models need more labels than a defense setting affords went
-untested. This script adds the baselines that settle both questions, over
-the SAME 20 replications and seeds as the main study:
+This script adds standard baselines to the B0 surrogate, unsmoothed MLE,
+prior-only, and abstract-sensor comparisons, and tests the introduction's
+premise that discriminative models need more labels than a defense setting
+affords, over the SAME 20 replications and seeds as the main study (ESS and
+L2 strength are varied in exp_comparators.py):
 
   uninformative MAP   Dirichlet posterior mean with a UNIFORM prior mean at
-                      the same ESS as the proposed method (the BDeu-style
-                      default of BN parameter learning) -- isolates smoothing
-                      from knowledge.
+                      the same ESS as the proposed method, a heavy setting
+                      for a uniform mean.
   Laplace             add-one counts (the other standard default).
   B1-MLE              unsmoothed maximum likelihood (already in the paper).
   B0-as-prior MAP     the hand-set surrogate table used as the PRIOR MEAN --

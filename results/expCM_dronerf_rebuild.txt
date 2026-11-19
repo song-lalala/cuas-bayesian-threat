@@ -1,0 +1,6 @@
+# prepare_dronerf_four.py --compare <the file used here> <rebuilt from the recordings>
+# numpy 2.4.4, scipy 1.18.0; rebuilt on the DroneRF recordings of the Mendeley record
+rows 4540 and 4540, in both 4540; same order: True
+spectrograms identical bit for bit 4539 of 4540; largest |difference| 2.012e-07; labels the same: True; class names the same: True
+the one row: 11000L_1.csv, chunk 5; one cell of 16384 differs, cell (61, 20): 0.06666258 against 0.06666278
+one float32 step of the dB value before normalization (spacing 1.907e-06, std 9.468, ratio 2.01e-07); the rebuilt value recurs at 18 memory offsets of the input

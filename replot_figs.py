@@ -49,7 +49,8 @@ def fig_ess():
                      ms=4, capsize=3, label=f"$N$={N}")
     ax2.set_xscale("log"); ax2.set_xlabel(r"ESS $\alpha_0$")
     ax2.set_ylabel("ECE")
-    ax2.grid(alpha=0.3); ax2.legend(fontsize=10)
+    ax2.grid(alpha=0.3)
+    ax2.legend(fontsize=10, loc="center left", bbox_to_anchor=(1.01, 0.5))
     ax2.set_title("knowledge-vs-data trade-off (mean $\\pm$95% CI)",
                   fontsize=12)
     fig.tight_layout()
@@ -102,8 +103,12 @@ def fig_regime():
                          f"{ess:g}", fontsize=13)
             for i in range(len(lams)):
                 for j in range(len(Ns)):
+                    # white on the dark cells, so the value stays legible
+                    rgb = im.cmap(im.norm(M[i, j]))[:3]
+                    dark = 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2] < 0.5
                     ax.text(j, i, f"{M[i,j]:+.3f}" + ("*" if S[i, j] else ""),
-                            ha="center", va="center", fontsize=13)
+                            ha="center", va="center", fontsize=13,
+                            color="white" if dark else "black")
         fig.colorbar(im, ax=list(axes[r]), fraction=0.03, pad=0.02)
     fig.suptitle("MAP $-$ cMAP by metric: red $=$ constraints help "
                  "($*$: paired $t$-test $p<0.05$)", fontsize=13)

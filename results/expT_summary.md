@@ -21,5 +21,5 @@
 - H(2, 2, 1)k1: theta=0.000, P in [0.603, 0.632] (swing -0.029)
 - N(2, 0)k0: theta=0.477, P in [0.622, 0.643] (swing -0.020)
 
-## credal bounds (top-5, one-at-a-time +-0.1)
-- one-at-a-time envelope over the top-5 parameters: P(T=high|e*) in [0.565, 0.700] (baseline 0.633) -- the threat decision is invariant over the credal set at the 0.5 decision level
+## one-at-a-time envelope (top-5, +-0.1)
+- one-at-a-time envelope over the top-5 parameters: P(T=high|e*) in [0.565, 0.700] (baseline 0.633) -- the threat decision is invariant over the envelope at the 0.5 decision level

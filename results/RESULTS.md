@@ -1,4 +1,6 @@
-# Experimental results (synthetic digital-twin study)
+> First results of July 2026 (ESS = 8.0, oracle accuracy 0.604), from an earlier world and protocol, kept for the record. These are not the values of the current paper: see `README.md`, *Tables and figures*.
+
+# Experimental results (synthetic study)
 
 Test set: 2500 held-out scenarios (seed 999); ESS=8.0. Oracle = true CPTs.
 

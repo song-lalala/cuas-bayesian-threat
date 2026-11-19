@@ -2,13 +2,12 @@
 Shared grounding pipeline used by every experiment script.
 
 Proposed method = {H, N, C: constrained posterior-mean (cmap_cpt, cvxpy)} +
-{T: ordinal cumulative-logit ICI (ordinal_ici_cpt, C1)} with the ESS fixed a
-priori at ESS_FIXED = 2 (a weakly informative Dirichlet whose equivalent
-sample size is of the order of the child cardinalities; Fig. 5 confirms post
-hoc that this sits on the flat ECE-optimal plateau alpha_0 in [2,5]). NO
-labelled validation split is consumed by the main pipeline, so every method
-in a comparison sees exactly the same N labelled scenarios (label-budget
-fairness). Held-out ESS selection (`select_ess`) is kept only as the option
+{T: ordinal cumulative-logit ICI (ordinal_ici_cpt, C1)} with the ESS fixed at
+ESS_FIXED = 2 per column (of the order of the child cardinalities), taken from
+the flat ECE plateau alpha_0 in [2,5] of the sweep of Sec. VII-E. NO labelled
+validation split is consumed by the main pipeline: every BN method sees the
+same N labelled scenarios and the same sensor-calibration split; the
+discriminative baseline sees only the N scenarios. Held-out ESS selection (`select_ess`) is kept only as the option
 studied in Sec. VII-E(iii) for settings where extra labels exist.
 
 Methods:
@@ -17,9 +16,9 @@ Methods:
   B2-expert      prior means only, no data
   MAP            Dirichlet posterior mean, full tables
   cMAP-full      constrained posterior mean, full tables ( = Proposed -ICI )
-  Proposed       cMAP for H,N,C + Noisy-MAX for T
+  Proposed       cMAP for H,N,C + ordinal ICI for T
 Ablations map onto: -ICI -> cMAP-full; -constraints -> MAP for H,N,C with
-Noisy-MAX T; -prior -> B1-MLE; -reliability -> alpha=None at evaluation.
+ordinal ICI T; -prior -> B1-MLE; -reliability -> alpha=None at evaluation.
 """
 from __future__ import annotations
 import numpy as np

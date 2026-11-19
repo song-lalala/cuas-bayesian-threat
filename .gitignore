@@ -6,3 +6,8 @@ venv/
 .env
 .DS_Store
 .ipynb_checkpoints/
+# downloaded recordings and their caches: not redistributed; data_derived/ holds the manifest and the boxes
+data/
+cache/
+# run logs: those already tracked stay, new ones stay out
+results/*.log

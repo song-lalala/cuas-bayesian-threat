@@ -1,7 +1,7 @@
 """
 Exp-F v2: correlated sensor errors and reliability miscalibration.
 
-(R1-7, R1-8, R1-10; revised for this resubmission: 20 seeds, adverse-subset
+(Version 2: 20 seeds, adverse-subset
 metrics with CIs shown in the figure, a LATENT-W and a noisy-W variant in
 addition to observed W, reliability weights actually fitted by logistic
 regression, and the far-heavy transfer test run in a world that really has
